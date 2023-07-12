@@ -10,7 +10,7 @@ export default function Home() {
   const router = useRouter()
   const {setUsername} = useUsername()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const newUser = data.find(d => d.username === user)
     setUsername(user)
